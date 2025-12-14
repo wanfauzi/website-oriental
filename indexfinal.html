@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website UMKM</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              emas: "#ffd700",
+              "emas-gelap": "#ffc700",
+              "hitam-teks": "#333",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+            },
+            animation: {
+              float: "float 3s ease-in-out infinite",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white text-hitam-teks overflow-x-hidden">
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-4 px-[7%] flex justify-between items-center border-b border-gray-100"
+    >
+      <a href="#" class="navbar-logo">
+        <img
+          src="assets/images/logo.png"
+          alt="Logo"
+          class="w-14 h-14 rounded-full object-cover border-[3px] border-emas"
+        />
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8">
+        <li>
+          <a
+            href="#home"
+            class="font-medium hover:text-emas transition relative after:content-[''] after:absolute after:bg-emas after:h-[2px] after:w-0 after:left-1/2 after:-bottom-1 after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#tentang"
+            class="font-medium hover:text-emas transition relative after:content-[''] after:absolute after:bg-emas after:h-[2px] after:w-0 after:left-1/2 after:-bottom-1 after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+            >Tentang Kami</a
+          >
+        </li>
+        <li>
+          <a
+            href="#produk"
+            class="font-medium hover:text-emas transition relative after:content-[''] after:absolute after:bg-emas after:h-[2px] after:w-0 after:left-1/2 after:-bottom-1 after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+            >Produk</a
+          >
+        </li>
+        <li>
+          <a
+            href="#kontak"
+            class="font-medium hover:text-emas transition relative after:content-[''] after:absolute after:bg-emas after:h-[2px] after:w-0 after:left-1/2 after:-bottom-1 after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+            >Kontak</a
+          >
+        </li>
+      </ul>
+
+      <div class="flex gap-4 items-center">
+        <a
+          href="#"
+          class="hover:text-emas hover:scale-110 transition duration-300"
+          ><i data-feather="instagram"></i
+        ></a>
+        <a
+          href="#"
+          class="hover:text-emas hover:scale-110 transition duration-300"
+          ><i data-feather="shopping-cart"></i
+        ></a>
+        <a href="#" id="hamburger-menu" class="md:hidden hover:text-emas"
+          ><i data-feather="menu"></i
+        ></a>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="absolute top-full right-0 translate-x-full w-full h-screen bg-white transition-transform duration-300 md:hidden"
+      >
+        <a
+          href="#home"
+          class="block py-4 text-lg border-b w-full hover:text-emas"
+          >Home</a
+        >
+        <a
+          href="#tentang"
+          class="block py-4 text-lg border-b w-full hover:text-emas"
+          >Tentang Kami</a
+        >
+        <a
+          href="#produk"
+          class="block py-4 text-lg border-b w-full hover:text-emas"
+          >Produk</a
+        >
+        <a
+          href="#kontak"
+          class="block py-4 text-lg border-b w-full hover:text-emas"
+          >Kontak</a
+        >
+      </div>
+    </nav>
+
+    <section
+      id="home"
+      class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-between gap-12 px-[7%] pt-32 pb-12 bg-gradient-to-br from-white to-[#fffaf0]"
+    >
+      <div class="flex-1 text-center md:text-left">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+          Rasakan Nikmatnya Kesegeran Limun<br />
+          <span class="text-emas block mt-2">Oriental Cap Nyonya</span>
+        </h2>
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+          Minuman Limun Oriental Cap Nyonya menjadi minuman legendaris khas
+          Pekalongan sejak era tahun 1920.
+        </p>
+        <a
+          href="#produk"
+          class="inline-block bg-gradient-to-r from-emas to-emas-gelap text-hitam-teks px-8 py-3 rounded-full font-semibold shadow-lg hover:-translate-y-1 hover:shadow-xl transition duration-300"
+        >
+          Pesan Sekarang
+        </a>
+      </div>
+      <div class="flex-1 flex justify-center animate-float">
+        <img
+          src="assets/images/beranda.png"
+          alt="Hero Image"
+          class="w-full max-w-[350px] md:max-w-[500px] drop-shadow-2xl"
+        />
+      </div>
+    </section>
+
+    <section
+      id="tentang"
+      class="px-[7%] py-20 bg-[#fffacd] flex flex-col md:flex-row items-center gap-12"
+    >
+      <div class="flex-1 flex justify-center">
+        <img
+          src="assets/images/tentangkami.png"
+          alt="Tentang Kami"
+          class="w-[400px] max-w-[550px] rounded-2xl shadow-xl"
+        />
+      </div>
+      <div class="flex-1 text-center md:text-left">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Tentang <span class="text-emas">Kami?</span>
+        </h2>
+        <p class="text-gray-600 text-lg leading-loose text-justify">
+          Oriental Cap Nyonya adalah minuman limun legendaris khas Pekalongan
+          yang telah ada sejak tahun 1920. Dengan rasa yang menyegarkan dan cita
+          rasa unik, Oriental Cap Nyonya telah menjadi pilihan favorit bagi
+          banyak orang. Diproduksi dengan bahan-bahan berkualitas tinggi,
+          minuman ini menawarkan pengalaman rasa yang tak terlupakan. Nikmati
+          kesegaran Oriental Cap Nyonya dan rasakan kenikmatan minuman
+          tradisional yang telah diwariskan dari generasi ke generasi.
+        </p>
+      </div>
+    </section>
+
+    <section id="produk" class="px-[7%] py-20 bg-white">
+      <h2 class="text-center text-3xl md:text-4xl font-bold mb-12">
+        Produk <span class="text-emas">Unggulan</span>
+      </h2>
+
+      <div class="flex flex-wrap justify-center gap-8">
+        <div
+          class="w-[260px] bg-white rounded-2xl p-5 shadow-lg text-center border border-gray-100 hover:shadow-2xl transition"
+        >
+          <div class="w-full h-[320px] rounded-2xl overflow-hidden mb-4">
+            <img
+              src="assets/images/produk oriental jeruk.jpeg"
+              alt="Produk 1"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="text-xl font-semibold mt-2">Limun Oriental Jeruk</h3>
+          <p class="text-gray-500 text-sm mt-1">
+            Segar citrus dengan manis-asam klasik
+          </p>
+          <div class="mt-3">
+            <p class="text-2xl text-emas-gelap italic font-bold">Rp 15.000</p>
+          </div>
+          <div class="mt-4 flex justify-center">
+            <button
+              class="bg-emas hover:bg-emas-gelap text-white px-6 py-2 rounded-full transition duration-300 font-medium"
+            >
+              Beli
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="w-[260px] bg-white rounded-2xl p-5 shadow-lg text-center border border-gray-100 hover:shadow-2xl transition"
+        >
+          <div class="w-full h-[320px] rounded-2xl overflow-hidden mb-4">
+            <img
+              src="assets/images/produk oriental bubblegum.jpeg"
+              alt="Produk 2"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="text-xl font-semibold mt-2">Limun Oriental Kopi</h3>
+          <p class="text-gray-500 text-sm mt-1">
+            Segar dengan cita rasa soda kopi unik
+          </p>
+          <div class="mt-3">
+            <p class="text-2xl text-emas-gelap italic font-bold">Rp 15.000</p>
+          </div>
+          <div class="mt-4 flex justify-center">
+            <button
+              class="bg-emas hover:bg-emas-gelap text-white px-6 py-2 rounded-full transition duration-300 font-medium"
+            >
+              Beli
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="w-[260px] bg-white rounded-2xl p-5 shadow-lg text-center border border-gray-100 hover:shadow-2xl transition"
+        >
+          <div class="w-full h-[320px] rounded-2xl overflow-hidden mb-4">
+            <img
+              src="assets/images/produk oriental kopi.jpeg"
+              alt="Produk 3"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="text-xl font-semibold mt-2">Limun Oriental Bubblegum</h3>
+          <p class="text-gray-500 text-sm mt-1">
+            Manis playful, favorit anak muda
+          </p>
+          <div class="mt-3">
+            <p class="text-2xl text-emas-gelap italic font-bold">Rp 15.000</p>
+          </div>
+          <div class="mt-4 flex justify-center">
+            <button
+              class="bg-emas hover:bg-emas-gelap text-white px-6 py-2 rounded-full transition duration-300 font-medium"
+            >
+              Beli
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="px-[7%] py-16 bg-gradient-to-br from-[#fffacd] to-[#fff8dc]"
+    >
+      <h2 class="text-center text-3xl md:text-4xl font-bold mb-10">
+        Galeri <span class="text-emas">Kami</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
+        <div
+          class="relative w-full h-[300px] rounded-2xl overflow-hidden shadow-md group hover:scale-105 transition duration-300"
+        >
+          <img
+            src="assets/images/pabrik1.jpg"
+            alt="Galeri 1"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute right-4 bottom-4 bg-black/50 text-white px-3 py-1 rounded-lg text-sm font-semibold"
+          >
+            Kegiatan 1
+          </div>
+        </div>
+        <div
+          class="relative w-full h-[300px] rounded-2xl overflow-hidden shadow-md group hover:scale-105 transition duration-300"
+        >
+          <img
+            src="assets/images/pabrik2.jpg"
+            alt="Galeri 2"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute right-4 bottom-4 bg-black/50 text-white px-3 py-1 rounded-lg text-sm font-semibold"
+          >
+            Produksi
+          </div>
+        </div>
+        <div
+          class="relative w-full h-[300px] rounded-2xl overflow-hidden shadow-md group hover:scale-105 transition duration-300"
+        >
+          <img
+            src="assets/images/pabrik5.jpg"
+            alt="Galeri 3"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute right-4 bottom-4 bg-black/50 text-white px-3 py-1 rounded-lg text-sm font-semibold"
+          >
+            Pameran
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-[7%] py-20 bg-[#fffdf3]">
+      <h2 class="text-center text-3xl font-bold mb-10">
+        Apa Kata <span class="text-emas">Mereka?</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div
+          class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100"
+        >
+          <p class="italic text-gray-600 mb-4 text-sm leading-relaxed">
+            "Produknya sangat enak dan kemasannya rapi. Sangat cocok untuk
+            oleh-oleh keluarga."
+          </p>
+          <h3 class="font-semibold text-gray-800">- Budi Santoso</h3>
+        </div>
+        <div
+          class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100"
+        >
+          <p class="italic text-gray-600 mb-4 text-sm leading-relaxed">
+            "Pelayanan ramah dan pengiriman cepat. Rasa tidak pernah
+            mengecewakan!"
+          </p>
+          <h3 class="font-semibold text-gray-800">- Siti Aminah</h3>
+        </div>
+        <div
+          class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100"
+        >
+          <p class="italic text-gray-600 mb-4 text-sm leading-relaxed">
+            "Harganya terjangkau untuk kualitas premium seperti ini. Sukses
+            terus UMKM!"
+          </p>
+          <h3 class="font-semibold text-gray-800">- Ahmad Rizky</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="px-[7%] py-20 bg-white">
+      <h2 class="text-center text-3xl md:text-4xl font-bold mb-12">
+        Hubungi <span class="text-emas">Kami</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div class="bg-[#fffacd] p-8 rounded-2xl shadow-lg h-fit">
+          <div class="flex items-center gap-4 mb-6">
+            <i data-feather="mail" class="text-emas w-6 h-6"></i>
+            <div>
+              <h3 class="text-lg font-bold text-hitam-teks">Email</h3>
+              <p class="text-gray-600">umkm@email.com</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 mb-6">
+            <i data-feather="phone" class="text-emas w-6 h-6"></i>
+            <div>
+              <h3 class="text-lg font-bold text-hitam-teks">Telepon/WA</h3>
+              <p class="text-gray-600">+62 812 3456 7890</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <i data-feather="map-pin" class="text-emas w-6 h-6"></i>
+            <div>
+              <h3 class="text-lg font-bold text-hitam-teks">Lokasi</h3>
+              <p class="text-gray-600">Jl. Mawar Melati No. 12, Jakarta</p>
+            </div>
+          </div>
+        </div>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1660.
+        0972617041355!2d109.67824223049266!3d-6.879844045904295!2m3!1f0!2f0!3f
+        0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7025ce255c8f6b%3A0x214c6e4eddfee654!2sPabrik%20
+        Limun%20Oriental!5e0!3m2!1sid!2sid!4v1765713134458!5m2!1sid!2sid"
+        class="w-full h-[280px] rounded-2xl shadow-lg border-0"
+        allowfullscreen="" loading="lazy"
+      </div>
+    </section>
+
+    <footer class="bg-hitam-teks text-white text-center py-8 px-[7%]">
+      <div class="flex justify-center gap-6 mb-4">
+        <a href="#" class="text-emas hover:scale-125 transition duration-300"
+          ><i data-feather="instagram"></i
+        ></a>
+        <a href="#" class="text-emas hover:scale-125 transition duration-300"
+          ><i data-feather="facebook"></i
+        ></a>
+        <a href="#" class="text-emas hover:scale-125 transition duration-300"
+          ><i data-feather="twitter"></i
+        ></a>
+      </div>
+      <p class="mb-2">
+        Created by <span class="text-emas font-bold">Nama UMKM</span>. | &copy;
+        2023.
+      </p>
+    </footer>
+
+    <script>
+      feather.replace();
+
+      // Logic Menu HP (Buka/Tutup)
+      const btn = document.getElementById("hamburger-menu");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        menu.classList.toggle("translate-x-full");
+      });
+    </script>
+  </body>
+</html>
